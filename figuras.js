@@ -20,3 +20,18 @@ const perimetroCirculo=(radio) => {
 };
 const areaCirculo =(radio) => Math.pow(radio,2)*PI;
 console.groupEnd();
+
+
+var calcularPerimetroCuadrado =  ()=>{
+    const input=document.getElementById("InputCuadrado");
+    const value=input.value;
+    const perimetro=perimeroCuadrado(value);
+    alert(perimetro);
+};
+
+var calcularAreaCuadrado =  ()=>{
+    const input=document.getElementById("InputCuadrado");
+    const value=input.value;
+    const area=areaCuadrado(value);
+    alert(area);
+};
