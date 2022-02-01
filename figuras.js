@@ -22,16 +22,56 @@ const areaCirculo =(radio) => Math.pow(radio,2)*PI;
 console.groupEnd();
 
 
-var calcularPerimetroCuadrado =  ()=>{
+const calcularPerimetroCuadrado =  ()=>{
     const input=document.getElementById("InputCuadrado");
-    const value=input.value;
+    const value=Number(input.value);
     const perimetro=perimeroCuadrado(value);
     alert(perimetro);
 };
 
-var calcularAreaCuadrado =  ()=>{
+const calcularAreaCuadrado =  ()=>{
     const input=document.getElementById("InputCuadrado");
-    const value=input.value;
+    const value=Number(input.value);
     const area=areaCuadrado(value);
+    alert(area);
+};
+
+const calcularPerimetroTriangulo =  ()=>{
+    const inputA=document.getElementById("InputTrianguloA");
+    const inputB=document.getElementById("InputTrianguloB");
+    const inputBase=document.getElementById("InputTrianguloBase");
+    const inputAltura=document.getElementById("InputTrianguloAltura");
+    const ladoA=Number(inputA.value);
+    const ladoB=Number(inputB.value);
+    const base=Number(inputBase.value);
+    const altura=Number(inputAltura.value);
+    const perimetro=perimetroTriangulo(ladoA,ladoB,base);
+    alert(perimetro);
+};
+
+const calcularAreaTriangulo =  ()=>{
+    const inputA=document.getElementById("InputTrianguloA");
+    const inputB=document.getElementById("InputTrianguloB");
+    const inputBase=document.getElementById("InputTrianguloBase");
+    const inputAltura=document.getElementById("InputTrianguloAltura");
+    const ladoA=Number(inputA.value);
+    const ladoB=Number(inputB.value);
+    const base=Number(inputBase.value);
+    const altura=Number(inputAltura.value);
+    const area=areaTriangulo(base,altura);
+    alert(area);
+};
+
+const calcularPerimetroCirculo =  ()=>{
+    const input=document.getElementById("InputRadio");
+    const value=Number(input.value);
+    const perimetro=perimetroCirculo(value);
+    alert(perimetro);
+};
+
+const calcularAreaCirculo =  ()=>{
+    const input=document.getElementById("InputRadio");
+    const value=Number(input.value);
+    const area=areaCirculo(value);
     alert(area);
 };
