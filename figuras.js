@@ -57,7 +57,12 @@ const calcularAreaTriangulo =  ()=>{
     const ladoA=Number(inputA.value);
     const ladoB=Number(inputB.value);
     const base=Number(inputBase.value);
-    const altura=Number(inputAltura.value);
+    let altura=0;
+    if(ladoA===ladoB){
+        altura=calcularAlturaIsosceles(ladoA,base);
+    }else{
+        altura=Number(inputAltura.value);
+    }
     const area=areaTriangulo(base,altura);
     alert(area);
 };
@@ -75,3 +80,5 @@ const calcularAreaCirculo =  ()=>{
     const area=areaCirculo(value);
     alert(area);
 };
+
+const calcularAlturaIsosceles = (ladoA,base)=> Math.sqrt(Math.pow(ladoA,2)-((Math.pow(base,2)/4)));
